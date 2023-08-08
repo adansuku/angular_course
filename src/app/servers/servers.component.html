@@ -1,5 +1,14 @@
-<p>servers works!</p>
-<app-server></app-server>
+<label for="">Server Name</label>
 
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
-<p [innerText]="allowNewServer"></p>
+<!-- <p>One way binding</p> -->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<!-- <p>{{ serverName }}</p> -->
+
+<p>Two-Way-Databinding</p>
+<input type="text" [(ngModel)]="serverName" class="form-control" (input)="onUpdateServerName($event)">
+<!-- <p>{{ serverName }}</p> -->
+
+<app-server></app-server>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()"> Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<!-- <p [innerText]="allowNewServer"></p> -->
