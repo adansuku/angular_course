@@ -5,8 +5,8 @@
 
 <h3>Logs:</h3>
 <ul>
-	<li *ngFor="let log of logs; let i = index" [ngClass]="{'log_item': i >= 5 }"
-		[ngStyle]="{'background-color': i >= 5 ? getBackgroundColor() : ''}">
+	<li *ngFor="let log of logs; let i = index" [ngClass]="{'log_item': i >= 4 }"
+		[ngStyle]="{'background-color': i >= 4 ? getBackgroundColor() : ''}">
 		Index {{ i }}: {{ log }}
 	</li>
 </ul>
