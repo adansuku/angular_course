@@ -1,0 +1,12 @@
+<hr>
+<p>practicing-directives works!</p>
+<button class="btn btn-primary" (click)="onShowContent()"> Display Details</button>
+<p *ngIf="showPassword">{{ secretPassword }}</p>
+
+<h3>Logs:</h3>
+<ul>
+	<li *ngFor="let log of logs; let i = index" [ngClass]="{'log_item': i >= 5 }"
+		[ngStyle]="{'background-color': i >= 5 ? getBackgroundColor() : ''}">
+		Index {{ i }}: {{ log }}
+	</li>
+</ul>
